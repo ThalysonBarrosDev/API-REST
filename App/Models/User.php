@@ -3,12 +3,12 @@
     namespace App\Models;
 
     class User {
-        private static $table = 'user';
+        private static $table = 'tb_user';
 
         public static function select(int $id) {
             $connPdo = new \PDO (DBDRIVE.': host='.DBHOST.'; dbname='.DBNAME, DBUSER, DBPASS);
 
-            $sql = 'SELECT * FROM '.self::$table.' WHERE id = :id';
+            $sql = 'SELECT * FROM '.self::$table.' WHERE idUser = :id';
             $stmt = $connPdo->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();

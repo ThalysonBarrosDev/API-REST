@@ -3,7 +3,7 @@ USE db_api_rest_one;
 CREATE TABLE tb_user (
 	idUser INTEGER AUTO_INCREMENT NOT NULL,
 	nameUser CHAR(50),
-	emailUser CHAR(50),
+	emailUser CHAR(50) UNIQUE KEY,
 	passwordUser CHAR(50),
 	PRIMARY KEY (idUser)
 );

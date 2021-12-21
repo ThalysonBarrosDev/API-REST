@@ -13,7 +13,8 @@
         }
 
         public function post() {
-            
+            $data = $_POST;
+            return Client::insert($data);
         }
 
         public function update() {
